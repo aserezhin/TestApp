@@ -9,22 +9,26 @@ import UIKit
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
+    // MARK: - UIWindowSceneDelegate
+
     var window: UIWindow?
+
+    // MARK: - Private properties
+
+    private lazy var appCoordinator: some Coordinatorable = AppCoordinator(window: self.window)
+
+    // MARK: - UIWindowSceneDelegate
 
     func scene(
         _ scene: UIScene,
         willConnectTo session: UISceneSession,
         options connectionOptions: UIScene.ConnectionOptions
     ) {
-        guard let windowScene = scene as? UIWindowScene else { return }
-
-        let window = UIWindow(windowScene: windowScene)
-
-        let nc = UINavigationController()
-        window.rootViewController = nc
-        window.makeKeyAndVisible()
-
-        self.window = window
+        guard let windowScene = scene as? UIWindowScene else {
+            return
+        }
+        self.window = UIWindow(windowScene: windowScene)
+        self.appCoordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -54,7 +58,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
 
 }
 
