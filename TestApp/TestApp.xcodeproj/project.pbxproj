@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E943D4F27EA4DC500051864 /* RegionCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E943D4E27EA4DC500051864 /* RegionCoordinator.swift */; };
 		3E9625E227E878F70063E2C3 /* Coordinatorable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9625E127E878F70063E2C3 /* Coordinatorable.swift */; };
 		3E9625E427E87A7B0063E2C3 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9625E327E87A7B0063E2C3 /* AppCoordinator.swift */; };
 		3E9625EE27E891270063E2C3 /* RegionListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E9625ED27E891270063E2C3 /* RegionListViewController.swift */; };
@@ -25,6 +26,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3E943D4E27EA4DC500051864 /* RegionCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionCoordinator.swift; sourceTree = "<group>"; };
 		3E9625E127E878F70063E2C3 /* Coordinatorable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinatorable.swift; sourceTree = "<group>"; };
 		3E9625E327E87A7B0063E2C3 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
 		3E9625ED27E891270063E2C3 /* RegionListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionListViewController.swift; sourceTree = "<group>"; };
@@ -70,6 +72,7 @@
 			children = (
 				3E9625E127E878F70063E2C3 /* Coordinatorable.swift */,
 				3E9625E327E87A7B0063E2C3 /* AppCoordinator.swift */,
+				3E943D4E27EA4DC500051864 /* RegionCoordinator.swift */,
 			);
 			path = Coordinators;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 				3E9625F827E90F840063E2C3 /* RegionUseCase.swift in Sources */,
 				3EC7EA8327E4F05300E05373 /* AppDelegate.swift in Sources */,
 				3E96260327E9E2580063E2C3 /* RegionListViewModelOutput.swift in Sources */,
+				3E943D4F27EA4DC500051864 /* RegionCoordinator.swift in Sources */,
 				3E96260127E91A560063E2C3 /* RegionListViewModel.swift in Sources */,
 				3E9625EE27E891270063E2C3 /* RegionListViewController.swift in Sources */,
 				3EC7EA8527E4F05300E05373 /* SceneDelegate.swift in Sources */,

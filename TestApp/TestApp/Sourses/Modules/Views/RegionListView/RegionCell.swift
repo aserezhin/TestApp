@@ -38,10 +38,11 @@ final class RegionCell: UITableViewCell {
         self.contentView.addSubview(self.label)
 
         let constraints = [
-            self.leadingAnchor.constraint(equalTo: self.label.leadingAnchor, constant: 16),
-            self.topAnchor.constraint(equalTo: self.label.topAnchor, constant: 10),
-            self.trailingAnchor.constraint(equalTo: self.label.leadingAnchor, constant: -16),
-            self.bottomAnchor.constraint(equalTo: self.label.bottomAnchor, constant: -10)
+            self.contentView.leadingAnchor.constraint(equalTo: self.label.leadingAnchor, constant: -16),
+            self.contentView.topAnchor.constraint(equalTo: self.label.topAnchor, constant: -10),
+            self.contentView.trailingAnchor.constraint(equalTo: self.label.leadingAnchor, constant: 16),
+            self.contentView.bottomAnchor.constraint(equalTo: self.label.bottomAnchor, constant: 10),
+            self.label.heightAnchor.constraint(equalToConstant: 25)
         ]
         NSLayoutConstraint.activate(constraints)
     }

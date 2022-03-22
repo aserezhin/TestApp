@@ -8,7 +8,7 @@
 import UIKit
 import Combine
 
-class RegionListViewController: UIViewController {
+class RegionListViewController: UIViewController, UITableViewDelegate {
 
     // MARK: - Nested
 
@@ -32,7 +32,7 @@ class RegionListViewController: UIViewController {
 
     init(viewModel: IRegionListViewModel) {
         self.viewModel = viewModel
-        super.init()
+        super.init(nibName: nil, bundle: nil)
     }
 
     required init?(coder: NSCoder) {
@@ -76,8 +76,11 @@ class RegionListViewController: UIViewController {
 
         NSLayoutConstraint.activate(constraints)
 
+        self.tableView.rowHeight = UITableView.automaticDimension
+        self.tableView.estimatedRowHeight = 44.0
         self.tableView.separatorStyle = .none
         self.tableView.register(RegionCell.self, forCellReuseIdentifier: "\(RegionCell.self)")
+        self.tableView.delegate = self
     }
 
     private func bind() {

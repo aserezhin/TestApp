@@ -15,6 +15,8 @@ class AppCoordinator: Coordinatorable {
 
     private weak var window: UIWindow?
 
+    private var regionCoordinator: RegionCoordinator?
+
     // MARK: - Coordinatorable properties
 
     var output: ((Any) -> Void)?
@@ -33,12 +35,19 @@ class AppCoordinator: Coordinatorable {
         }
 
         let tabBarController = UITabBarController()
-        tabBarController.viewControllers = [UIViewController(), UIViewController(), UIViewController()]
+        let ncRegion = UINavigationController()
+        tabBarController.viewControllers = [ncRegion]
 
         window.rootViewController = tabBarController
         window.makeKeyAndVisible()
+
+        self.showRegionFlow(nc: ncRegion)
     }
 
     // MARK: - Private methods
 
+    private func showRegionFlow(nc: UINavigationController) {
+        self.regionCoordinator = RegionCoordinator(nc: nc)
+        self.regionCoordinator?.open()
+    }
 }
